@@ -16,6 +16,8 @@
 		"pretest": "cross-env NODE_ENV=test npm run migrate:reset",
 		"migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate",
 		"migrate": "npx sequelize-cli db:migrate",
+		"gen:env": "cp .env.example .env",
+		"db:seed": "npx sequelize db:seed:all",
 		"dev": "nodemon",
 		"start": "node src/index"
 	},
